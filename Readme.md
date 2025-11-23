@@ -10,14 +10,12 @@ The system mimics real-world insurance fraud workflows and includes:
 * Combined Risk Scoring
 * Investigation Queue with Priority Ranking
 * Visualizations & Model Evaluation
-* Auto-pay vs Investigate decision logic
 
 ---
 
 ## 🚀 Key Features
 
 ✔ **Flags suspicious claims**
-✔ **Auto-pays normal claims**
 ✔ **Handles missing documents & messy data**
 ✔ **Detects organized fraud (fraud rings)**
 ✔ **Uses multiple ML models + anomaly detection**
@@ -319,11 +317,6 @@ This system:
 
 ---
 
-If you want, I can also generate:
 
-📄 A professional PDF project report
-🎤 A 2-slide interview pitch
-📦 A full ZIP folder with organized code
-🧪 Synthetic fraud test dataset
 
-Just tell me — *Which output do you want next?*
+
