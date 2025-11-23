@@ -1,7 +1,3 @@
-"""
-evaluation.py
-Provides helper functions to evaluate classifier performance.
-"""
 
 import numpy as np
 from sklearn.metrics import (
@@ -11,9 +7,8 @@ from sklearn.metrics import (
 )
 
 
-# ------------------------------------------------------------
+
 # CLASSIFIER EVALUATION
-# ------------------------------------------------------------
 def evaluate_classifier(y_true, y_pred, y_proba=None):
     """
     Prints classification metrics:
@@ -36,9 +31,8 @@ def evaluate_classifier(y_true, y_pred, y_proba=None):
             print("ROC-AUC could not be calculated.")
 
 
-# ------------------------------------------------------------
+
 # TOP-K SCORE THRESHOLDING
-# ------------------------------------------------------------
 def threshold_topk(df_with_scores, k=100):
     """
     Takes a dataframe containing a `risk_score` column and returns top-k rows.

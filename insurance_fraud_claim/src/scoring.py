@@ -8,9 +8,9 @@ import numpy as np
 import pandas as pd
 
 
-# ------------------------------------------------------------
+
 # CALCULATE RISK SCORE
-# ------------------------------------------------------------
+
 def compute_risk(anomaly_score, clf_proba, network_score, weights=None):
     """
     Returns:
@@ -49,9 +49,9 @@ def compute_risk(anomaly_score, clf_proba, network_score, weights=None):
     return score, confidence
 
 
-# ------------------------------------------------------------
+
 # BUILD INVESTIGATION QUEUE
-# ------------------------------------------------------------
+
 def build_queue(df: pd.DataFrame, score_arr, conf_arr, top_k=200):
     """
     Sorts claims by:

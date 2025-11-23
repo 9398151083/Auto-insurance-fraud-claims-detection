@@ -3,7 +3,6 @@ models.py
 Trains two models:
  - IsolationForest (unsupervised anomaly detection)
  - RandomForestClassifier (supervised fraud prediction)
-
 Also includes model saving/loading.
 """
 
@@ -34,9 +33,9 @@ class FraudPipelineModels:
 
         self.feature_cols = None
 
-    # ------------------------------------------------------------
+   
     # TRAINING
-    # ------------------------------------------------------------
+   
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
         self.feature_cols = list(X.columns)
@@ -64,9 +63,8 @@ class FraudPipelineModels:
         else:
             print("No labels provided. Classifier NOT trained.")
 
-    # ------------------------------------------------------------
     # PREDICTION
-    # ------------------------------------------------------------
+   
     def predict(self, X: pd.DataFrame):
         """
         Returns:
@@ -90,9 +88,9 @@ class FraudPipelineModels:
             "clf_proba": c_proba
         }
 
-    # ------------------------------------------------------------
+   
     # SAVE / LOAD MODELS
-    # ------------------------------------------------------------
+  
     def save(self, prefix: str):
         joblib.dump(self.anomaly, f"{prefix}_iso.joblib")
         joblib.dump(self.clf, f"{prefix}_clf.joblib")

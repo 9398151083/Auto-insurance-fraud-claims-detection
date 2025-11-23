@@ -27,9 +27,9 @@ from scoring import compute_risk, build_queue
 from utils import save_csv
 
 
-# =============================================================
+
 # MAIN FUNCTION
-# =============================================================
+
 def train_and_export(csv_path: str, model_prefix: str = "models/fraud_model", top_k: int = 200):
 
     print("\n===== STEP 1: LOADING DATA =====")
@@ -77,9 +77,9 @@ def train_and_export(csv_path: str, model_prefix: str = "models/fraud_model", to
     return queue
 
 
-# =============================================================
+
 # COMMAND-LINE ENTRY POINT
-# =============================================================
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", required=True, help="Path to insurance_claims CSV file")

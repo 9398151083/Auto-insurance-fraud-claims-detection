@@ -1,8 +1,8 @@
 📘 Automated Insurance Claim Fraud Detection System
 
-This project builds an **end-to-end AI system** that analyzes auto-insurance claims, detects potentially fraudulent submissions, and prioritizes them for investigator review.
+This project builds an **end-to-end AI system** that analyzes auto-insurance claims, detects potentially fraud submissions, and prioritizes them for investigator review.
 
-The system mimics real-world insurance fraud workflows and includes:
+The system mimics the real-world insurance fraud workflows and includes:
 
 * Anomaly Detection
 * Supervised ML Models
@@ -11,7 +11,6 @@ The system mimics real-world insurance fraud workflows and includes:
 * Investigation Queue with Priority Ranking
 * Visualizations & Model Evaluation
 
----
 
 ## 🚀 Key Features
 

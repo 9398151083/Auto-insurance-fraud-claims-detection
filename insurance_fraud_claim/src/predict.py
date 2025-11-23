@@ -9,9 +9,9 @@ import pandas as pd
 import numpy as np
 
 
-# ------------------------------------------------------------
+
 # LOAD MODELS
-# ------------------------------------------------------------
+
 def load_models(prefix: str):
     """
     Loads IsolationForest, RandomForestClassifier, and feature list.
@@ -24,9 +24,9 @@ def load_models(prefix: str):
     return iso, clf, feature_cols
 
 
-# ------------------------------------------------------------
+
 # MAKE PREDICTIONS
-# ------------------------------------------------------------
+
 def predict_from_models(df_features: pd.DataFrame, iso, clf, feature_cols):
     """
     df_features → DataFrame that already contains all feature columns.

@@ -1,8 +1,3 @@
-"""
-data_loader.py
-Loads your insurance_claims CSV file and prepares basic fields.
-"""
-
 import os
 import pandas as pd
 

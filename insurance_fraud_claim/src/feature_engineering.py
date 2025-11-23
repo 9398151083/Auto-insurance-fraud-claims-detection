@@ -20,7 +20,7 @@ def make_features(df: pd.DataFrame, drop_originals: bool = False):
 
     dff = df.copy()
 
-    # ===== NUMERIC FEATURE ENGINEERING =====
+    #  NUMERIC FEATURE ENGINEERING 
 
     # Log-transform total claim amount
     if "total_claim_amount" in dff.columns:
@@ -33,9 +33,9 @@ def make_features(df: pd.DataFrame, drop_originals: bool = False):
         elif col in dff.columns:
             dff[f"{col}_ratio"] = dff[col] / (dff[col].max() if dff[col].max() else 1)
 
-    # ===== CATEGORICAL ENCODING =====
+    # CATEGORICAL ENCODING 
 
-    # List of categorical columns to one-hot encode
+    
     cat_cols_to_encode = [
         "incident_type",
         "collision_type",
@@ -61,7 +61,7 @@ def make_features(df: pd.DataFrame, drop_originals: bool = False):
             dff = pd.concat([dff, dummies], axis=1)
             all_cat_features.extend(dummies.columns)
 
-    # ===== NUMERIC FEATURES TO KEEP =====
+    # NUMERIC FEATURES TO KEEP 
 
     numeric_features = [
         "log_total_claim_amount",
