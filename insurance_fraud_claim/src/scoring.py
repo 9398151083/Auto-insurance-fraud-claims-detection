@@ -1,5 +1,4 @@
 """
-scoring.py
 Combines model outputs into a final risk score for fraud detection.
 Also builds an investigation priority queue.
 """
@@ -10,6 +9,7 @@ import pandas as pd
 
 
 # CALCULATE RISK SCORE
+
 
 def compute_risk(anomaly_score, clf_proba, network_score, weights=None):
     """
@@ -50,6 +50,7 @@ def compute_risk(anomaly_score, clf_proba, network_score, weights=None):
 
 
 
+
 # BUILD INVESTIGATION QUEUE
 
 def build_queue(df: pd.DataFrame, score_arr, conf_arr, top_k=200):
@@ -58,6 +59,8 @@ def build_queue(df: pd.DataFrame, score_arr, conf_arr, top_k=200):
       1. Highest risk score
       2. Highest confidence
       3. Highest claim amount (tie-breaker)
+    Adds:
+      - decision: INVESTIGATE or AUTO-PAY
     """
 
     out = df.copy()
@@ -81,5 +84,12 @@ def build_queue(df: pd.DataFrame, score_arr, conf_arr, top_k=200):
     out = out.sort_values(sort_columns, ascending=ascending_order).reset_index(drop=True)
 
     out["priority_rank"] = out.index + 1
+
+   
+    # NEW COLUMN: DECISION (INVESTIGATE / AUTO-PAY)
+   
+    out["decision"] = out["risk_score"].apply(
+        lambda x: "INVESTIGATE" if x > 0.73 else "AUTO-PAY"
+    )
 
     return out.head(top_k)

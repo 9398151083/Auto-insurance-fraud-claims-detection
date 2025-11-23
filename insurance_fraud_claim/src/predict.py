@@ -1,5 +1,4 @@
 """
-predict.py
 Loads trained models and generates predictions (fraud scores) 
 for new claim data.
 """

@@ -1,7 +1,7 @@
 """
-network_analysis.py
+
 Creates lightweight graph-based fraud features using ZIP / CITY and AUTO_MAKE.
-This helps detect suspicious clusters (organized fraud rings).
+This helps detect suspicious clusters 
 """
 
 import networkx as nx

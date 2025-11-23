@@ -1,6 +1,5 @@
 """
-pipeline.py
-Runs the complete fraud detection pipeline:
+
 
 1. Load CSV
 2. Preprocess data
