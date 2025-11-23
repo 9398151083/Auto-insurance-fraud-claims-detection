@@ -275,30 +275,6 @@ The project calculates:
 
 The notebook contains visualizations for all metrics.
 
----
-
-# 🧩 Why This Design Is Excellent for Interviews
-
-Your solution shows:
-
-✔ Multi-model fraud detection (anomaly + supervised)
-✔ Graph-based fraud ring detection (very impressive!)
-✔ Proper ML pipeline engineering
-✔ Investigation prioritization (business requirement)
-✔ Realistic insurance fraud handling
-✔ Clean modular code following best practices
-✔ Professional notebook with visualizations
-
-This aligns **exactly** with the skills organizations want:
-
-* AI/ML
-* Critical reasoning
-* Fraud domain knowledge
-* System design
-* Modular engineering
-
----
-
 # 🏁 Conclusion
 
 This system:
