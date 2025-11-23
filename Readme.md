@@ -305,7 +305,6 @@ This aligns **exactly** with the skills organizations want:
 This system:
 
 ✔ Flags the fraud
-✔ Auto-pays clean claims
 ✔ Builds an investigation queue
 ✔ Computes priority
 ✔ Applies confidence scoring
@@ -313,9 +312,6 @@ This system:
 ✔ Provides visual insights
 ✔ Delivers a full ML pipeline
 
-**This is a complete, production-style fraud detection project suitable for interviews, submissions, and real deployments.**
-
----
 
 
 
